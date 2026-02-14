@@ -39,12 +39,15 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-<br><br><br>
+Please check [detailed detup](https://github.com/angelaykang/reddit_forum_analysis/blob/main/SETUP.md) for detailed setup instructions.
+<br><br>
+
+# Automation Run Command
 
 
 
 
-# Manual Running the Scripts for Collecting data and clustering analysis
+# Manually Run Commands for Collecting data and clustering analysis
 **Requirements:** Python 3.8+, `pip install -r requirements.txt`, MySQL running. No Reddit API credentials needed.
 
 ### Data Collection
