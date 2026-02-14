@@ -50,6 +50,16 @@ pip install -r requirements.txt
 python3 reddit_forum_analysis.py 500
 python3 reddit_forum_analysis.py 5000
 ```
+**Expected screen when you run** `python3 reddit_forum_analysis.py 500`
+    
+    [1] Fetching posts from r/datasciencecareers, r/datasciencejobs, r/cscareerquestions, r/experienceddevs...
+        Fetched 500 posts.
+    [2] Preprocessing (clean text, filter ads, keywords)...
+        499 posts after preprocessing.
+    [3] Writing to database...
+        499 rows inserted/updated.
+    Done.
+<br>
 
 **Options:**
 ```bash
