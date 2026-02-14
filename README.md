@@ -1,6 +1,10 @@
 # DSCI 560: Lab 5 - Data Collection for Domain-Specific Chatbot
 
-## Team: pylovers
+### Project Overview
+
+This lab builds a simple Reddit analysis pipeline: collect posts, clean and store them in MySQL, embed and cluster them, and visualize the clusters. Then you wrap it in an automation + interactive CLI so the database updates on a schedule, and you can type a query to find the closest cluster and see representative posts and plots.
+
+### Team: pylovers
 
 | Name | USC ID |
 |------|--------|
@@ -29,17 +33,18 @@
 - We do **not** use Selenium. Reddit data is fetched via **requests** to Reddit’s public .json. The assignment allows a different system if it gives career-beneficial experience; using requests + BeautifulSoup gives experience with HTTP, web scraping, and HTML/text cleaning.
 - **Other:** `pymysql` (MySQL driver). Optional: `pytesseract`, `Pillow` (OCR only).
 
-** Installation (Ubuntu/Linux):** Minimal setup per assignment.
+**Installation (Ubuntu/Linux):** Minimal setup per assignment.
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
+<br><br><br>
 
 ## Manual Running the Scripts for Collecting data and clustering analysis
-
 **Requirements:** Python 3.8+, `pip install -r requirements.txt`, MySQL running. No Reddit API credentials needed.
 
+### Data Collection
 **Basic data collection run:**
 ```bash
 python3 reddit_forum_analysis.py 500
@@ -53,8 +58,9 @@ python3 reddit_forum_analysis.py 500 --ocr
 ```
 - `--subreddit SUB` — Subreddit(s) to use (repeat for multiple).
 - `--ocr` — Extract text from post images via Pytesseract (requires `pytesseract`, `Pillow`, and system Tesseract, e.g. `sudo apt install tesseract-ocr`).
+<br><br><br>
 
-**Clustering analysis:**
+### Clustering analysis
 ```bash
 # Search for best K with silhouette analysis (K=2-15)
 python3 clustering_analysis.py
