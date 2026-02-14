@@ -41,7 +41,10 @@ pip install -r requirements.txt
 ```
 <br><br><br>
 
-## Manual Running the Scripts for Collecting data and clustering analysis
+
+
+
+# Manual Running the Scripts for Collecting data and clustering analysis
 **Requirements:** Python 3.8+, `pip install -r requirements.txt`, MySQL running. No Reddit API credentials needed.
 
 ### Data Collection
@@ -84,3 +87,42 @@ python3 clustering_analysis.py --min-k 3 --max-k 10 --outdir results/plots
 - `--k K` - Use a fixed number of clusters (skips auto-selection).
 - `--min-k` / `--max-k` - Range for automatic K selection (default 2–15).
 - `--outdir DIR` - Directory for saved plots (default: `plots/`).
+
+**Expected screen when you run** `python3 clustering_analysis.py --k 6`
+
+    Loaded 501 posts from MySQL DB.
+    Loading model: all-MiniLM-L6-v2
+    
+    Embedding 501 documents.
+    Batches: 100%|███████████████████| 16/16 [00:02<00:00,  7.73it/s]
+    Embedding shape: (501, 384)
+    
+    Cluster Plot saved to plots/clusters_2d.png
+    Posts per Cluster Plot saved to plots/posts_per_cluster.png
+    
+    Posts Nearest Centroids:
+    
+    
+    Cluster 1 (59 posts)
+     - Keywords: code, like, work, time, use, software, https, would, using, tools
+     - Subreddit Occurrences: subreddit
+    experienceddevs       43
+    cscareerquestions     13
+    datasciencejobs        2
+    datasciencecareers     1
+    
+     - Posts Nearest Centroid:
+         - [r/experienceddevs] Hot take for discussion strong architecture patterns work equally well for AI and Juniors.
+         - [r/experienceddevs] It isn't the tool, but the hands why the AI displacement narrative gets it backwards
+         - [r/experienceddevs] AI-assisted coding and the true Bottlenecks in Software Development
+         - [r/cscareerquestions] Is it foolish to avoid using AI coding agents?
+         - [r/experienceddevs] Do you think there will be a breaking point where decreasing code quality becomes a problem, outside of engineering?
+    
+    
+    Cluster 2 (96 posts)
+     - Keywords: job, like, years, work, career, get, experience, time, really, people
+     - Subreddit Occurrences: subreddit
+    cscareerquestions     51
+    datasciencecareers    16
+    experienceddevs       16
+    datasciencejobs       13
