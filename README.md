@@ -43,6 +43,9 @@ Please check [detailed detup](https://github.com/angelaykang/reddit_forum_analys
 <br><br>
 
 # Automation Run Command
+This script runs an automated loop that periodically pulls new Reddit posts into MySQL and reruns clustering, so the database stays up to date. In parallel, it provides an interactive CLI where your query is embedded and matched to the nearest cluster centroid, then prints that cluster’s summary, representative posts, and plot paths.
+
+
 
 
 
