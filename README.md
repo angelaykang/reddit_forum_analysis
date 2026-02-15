@@ -105,7 +105,7 @@ python3 clustering_analysis.py --min-k 3 --max-k 10 --outdir results/plots
 - `--min-k` / `--max-k` - Range for automatic K selection (default 2–15).
 - `--outdir DIR` - Directory for saved plots (default: `plots/`).
 
-**Expected screen when you run** `python3 clustering_analysis.py --k 6`
+**Expected screen when you run** `python3 clustering_analysis.py --k 6 --outdir results/plots`
 
     Loaded 501 posts from MySQL DB.
     Loading model: all-MiniLM-L6-v2
