@@ -147,3 +147,6 @@ python3 clustering_analysis.py --min-k 3 --max-k 10 --outdir results/plots
     .
     .
     
+Generated Plots:
+<img width="1200" height="800" alt="Image" src="https://github.com/user-attachments/assets/1ce52dca-ce69-43f4-8de4-4427435b4119" />
+<img width="1400" height="600" alt="Image" src="https://github.com/user-attachments/assets/b6070954-f58b-465f-8250-cf12790d4304" />
