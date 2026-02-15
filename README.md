@@ -1,4 +1,4 @@
-# DSCI 560: Lab 5 - Data Collection for Domain-Specific Chatbot
+# DSCI 560: Lab 5
 
 ### Project Overview
 
@@ -45,10 +45,21 @@ Please check [detailed detup](https://github.com/angelaykang/reddit_forum_analys
 # Automation Run Command
 This script runs an automated loop that periodically pulls new Reddit posts into MySQL and reruns clustering, so the database stays up to date. In parallel, it provides an interactive CLI where your query is embedded and matched to the nearest cluster centroid, then prints that cluster’s summary, representative posts, and plot paths.
 
+    python3 main.py --min 1 --data_num 500 --k 6 --cluster-every 1 --outdir plot
 
 
+`--min 1`: Background update interval in minutes. Every 1 minute, the script reruns data collection (and clustering depending on --cluster-every).
+
+`--data_num 500`: Number of Reddit posts to fetch each update cycle (passed to reddit_forum_analysis.py).
+
+`--k 6`: Number of clusters to use for K-means (passed to clustering_analysis.py --k), and also the number of centroids used for interactive query matching.
+
+`--cluster-every 1`: Run clustering once every N update cycles. 1 means cluster every cycle; 2 would mean cluster every other cycle, etc.
+
+`--outdir plot`: Output directory where clustering plots are saved (e.g., plot/clusters_2d.png, plot/posts_per_cluster.png).
 
 
+<br><br>
 
 # Manually Run Commands for Collecting data and clustering analysis
 **Requirements:** Python 3.8+, `pip install -r requirements.txt`, MySQL running. No Reddit API credentials needed.
